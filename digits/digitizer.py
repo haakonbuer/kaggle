@@ -1,4 +1,5 @@
 import csv
+import os, sys
 
 __author__ = 'haakon'
 
@@ -18,7 +19,7 @@ def parse_test_data(data):
 def main():
 
     train_data = []
-    with open('train.csv', 'rb') as csvfile:
+    with open('train.csv') as csvfile:
         print "Opened file"
         fr = csv.reader(csvfile)
         for row in fr:
